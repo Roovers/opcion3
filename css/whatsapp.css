@@ -1,0 +1,90 @@
+/* Botón flotante con Glow y ondas expansivas */
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #25D366, #000000);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  box-shadow: 0 0 25px rgba(37,211,102,0.7), 0 10px 30px rgba(0,0,0,0.4);
+  z-index: 999;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: glowPulse 2s infinite;
+}
+
+/* Efecto hover potente en el contenedor */
+.whatsapp-float:hover {
+  transform: scale(1.2) rotate(5deg);
+  box-shadow: 0 0 60px rgba(37,211,102,1), 0 0 100px rgba(37,211,102,0.9);
+}
+
+/* Neon en el ícono al pasar el mouse */
+.whatsapp-float i {
+  transition: text-shadow 0.4s ease, color 0.4s ease;
+}
+
+/* Aquí el glow neón del ícono */
+.whatsapp-float:hover i {
+  color: #ffffff;
+  text-shadow:
+    0 0 5px #25D366,
+    0 0 10px #25D366,
+    0 0 20px #25D366,
+    0 0 40px #25D366;
+}
+
+/* Glow pulsante */
+@keyframes glowPulse {
+  0% {
+    box-shadow: 0 0 25px rgba(37,211,102,0.7), 0 10px 30px rgba(0,0,0,0.4);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(37,211,102,0.9), 0 15px 40px rgba(0,0,0,0.5);
+  }
+  100% {
+    box-shadow: 0 0 25px rgba(37,211,102,0.7), 0 10px 30px rgba(0,0,0,0.4);
+  }
+}
+
+/* Ondas expansivas alrededor del botón */
+.whatsapp-float::before {
+  content: '';
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: rgba(37,211,102,0.3);
+  animation: wave 2s infinite;
+  z-index: -1;
+}
+
+/* Animación de la onda */
+@keyframes wave {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  70% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+.whatsapp-float:hover i {
+  text-shadow:
+    0 0 5px #25D366,
+    0 0 10px #25D366,
+    0 0 20px #25D366,
+    0 0 40px #25D366;
+}

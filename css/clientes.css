@@ -1,0 +1,147 @@
+/* ===== CLIENTS STYLES ===== */
+.clients {
+  background: var(--bg-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+.clients::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.03) 0%, transparent 50%);
+  z-index: 1;
+}
+
+.clients .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Marquee Animation */
+.clients__marquee {
+  overflow: hidden;
+  position: relative;
+  margin-top: var(--space-12);
+}
+
+.clients__track {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+  animation: marquee 30s linear infinite;
+  width: max-content;
+}
+
+.clients__logo {
+  height: 100px;
+  width: auto;
+  max-width: 150px;
+  object-fit: contain;
+  filter: grayscale(100%) brightness(0.7);
+  transition: all var(--transition-normal);
+  border-radius: var(--radius-lg);
+  padding: var(--space-3);
+  background: var(--bg-glass);
+  border: 1px solid var(--border-color);
+  backdrop-filter: blur(10px);
+}
+
+.clients__logo:hover {
+  filter: grayscale(0%) brightness(1);
+  transform: scale(1.1);
+  border-color: var(--primary-color);
+  box-shadow: var(--shadow-glow);
+}
+
+/* Marquee Animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pause animation on hover */
+.clients__marquee:hover .clients__track {
+  animation-play-state: paused;
+}
+
+/* Alternative Grid Layout for smaller screens */
+@media screen and (max-width: 768px) {
+  .clients__marquee {
+    display: none;
+  }
+  
+  .clients__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+    margin-top: var(--space-12);
+  }
+  
+  .clients__grid .clients__logo {
+    height: 50px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+  }
+  
+  .clients__grid .clients__logo:nth-child(1) { animation-delay: 0.1s; }
+  .clients__grid .clients__logo:nth-child(2) { animation-delay: 0.2s; }
+  .clients__grid .clients__logo:nth-child(3) { animation-delay: 0.3s; }
+  .clients__grid .clients__logo:nth-child(4) { animation-delay: 0.4s; }
+  .clients__grid .clients__logo:nth-child(5) { animation-delay: 0.5s; }
+  .clients__grid .clients__logo:nth-child(6) { animation-delay: 0.6s; }
+  .clients__grid .clients__logo:nth-child(7) { animation-delay: 0.7s; }
+  .clients__grid .clients__logo:nth-child(8) { animation-delay: 0.8s; }
+}
+
+@media screen and (max-width: 480px) {
+  .clients__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+  
+  .clients__grid .clients__logo {
+    height: 40px;
+  }
+}
+
+/* Show grid on mobile, hide marquee */
+.clients__grid {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .clients__marquee {
+    display: none;
+  }
+  
+  .clients__grid {
+    display: grid;
+  }
+}
+
+/* Intersection Observer Animation */
+.clients__logo.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
