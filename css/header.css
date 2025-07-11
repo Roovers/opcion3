@@ -219,10 +219,7 @@
     font-size: var(--fs-lg);
   }
   
-  .nav__logo-img {
-    width: 45px;
-    height: 45px;
-  }
+
   
   .nav__toggle,
   .nav__social-link {

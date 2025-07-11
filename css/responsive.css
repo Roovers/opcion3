@@ -1,0 +1,197 @@
+/* ===========================
+   RESPONSIVE FIXES MOBILE
+   =========================== */
+
+/* 1. Hero Section */
+@media (max-width: 768px) {
+  .hero__container {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+    text-align: center;
+  }
+
+  .hero__visual {
+    order: -1;
+  }
+
+  .hero__image {
+    height: 300px;
+  }
+
+  .hero__title {
+    font-size: var(--fs-3xl);
+  }
+
+  .hero__description {
+    font-size: var(--fs-base);
+  }
+
+  .hero__buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero__buttons .btn {
+    width: 100%;
+  }
+
+  .hero__stats {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+}
+
+/* 2. About Section */
+@media (max-width: 768px) {
+  .about__container {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+    text-align: center;
+  }
+
+  .about__visual {
+    order: -1;
+  }
+
+  .about__image {
+    height: 300px;
+  }
+
+  .about__experience {
+    top: var(--space-4);
+    right: var(--space-4);
+    width: 80px;
+    height: 80px;
+  }
+
+  .about__experience-number {
+    font-size: var(--fs-lg);
+  }
+}
+
+/* 3. Services Section */
+@media (max-width: 768px) {
+  .services__container {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .service__card {
+    padding: var(--space-6);
+  }
+}
+
+/* 4. Products (Swiper) */
+@media (max-width: 768px) {
+  .products__container .swiper-button-prev,
+  .products__container .swiper-button-next {
+    display: none;
+  }
+
+  .product__image {
+    height: 200px;
+  }
+
+  .product__content {
+    padding: var(--space-4);
+  }
+
+  .product__title {
+    font-size: var(--fs-lg);
+  }
+}
+
+/* 5. Contact Section */
+@media (max-width: 768px) {
+  .contact__container {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .contact__form {
+    padding: var(--space-6);
+  }
+
+  .form__input {
+    width: 100%;
+  }
+
+  .contact__item {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-3);
+  }
+}
+
+/* 6. Footer */
+@media (max-width: 768px) {
+  .footer__content {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+    text-align: start;
+  }
+
+  .footer__logo {
+    justify-content: center;
+  }
+
+  .footer__social {
+    justify-content: center;
+  }
+}
+
+/* 7. Clients Section */
+@media (max-width: 768px) {
+  .clients__marquee {
+    display: none;
+  }
+
+  .clients__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+    margin-top: var(--space-8);
+  }
+
+  .clients__grid .clients__logo {
+    height: 50px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .clients__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .clients__grid .clients__logo {
+    height: 40px;
+  }
+}
+
+/* 8. General Section Padding Reduction */
+@media (max-width: 768px) {
+  .section {
+    padding: var(--space-12) 0;
+  }
+
+  .section__header {
+    margin-bottom: var(--space-8);
+  }
+
+    .nav__logo-img {
+    width: 70px;
+    height: 45px;
+  }
+}
+
+/* 9. Typography Additional Adjustment */
+@media (max-width: 480px) {
+  .hero__title {
+    font-size: var(--fs-2xl);
+  }
+
+  .hero__description {
+    font-size: var(--fs-base);
+  }
+}
