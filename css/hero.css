@@ -229,6 +229,7 @@
 }
 
 /* Responsive Design */
+/* Responsive Design */
 @media screen and (max-width: 1024px) {
   .hero__container {
     grid-template-columns: 1fr;
@@ -294,5 +295,10 @@
   
   .hero__buttons .btn {
     width: 100%;
+  }
+  
+  /* 🔹 Ajuste altura imagen hero */
+  .hero__image {
+    height: 220px;
   }
 }

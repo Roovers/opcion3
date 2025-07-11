@@ -220,4 +220,10 @@
     padding: var(--space-1) var(--space-2);
     font-size: 0.625rem;
   }
+  
+  /* 🔹 Ajuste tamaño bullets swiper */
+  .products__container .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+  }
 }

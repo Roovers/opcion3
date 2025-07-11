@@ -206,42 +206,6 @@
 
 
 /* Responsive Design */
-@media screen and (max-width: 1024px) {
-  .contact__container {
-    grid-template-columns: 1fr;
-    gap: var(--space-16);
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .contact__container {
-    gap: var(--space-12);
-  }
-  
-  .contact__form {
-    padding: var(--space-6);
-    grid-template-columns: 1fr;
-  }
-  
-  .contact__item {
-    padding: var(--space-4);
-  }
-  
-  .contact__item:hover {
-    transform: translateY(-5px);
-  }
-  
-  .contact__icon {
-    width: 45px;
-    height: 45px;
-    font-size: var(--fs-base);
-  }
-  
-  .contact__data h3 {
-    font-size: var(--fs-base);
-  }
-}
-
 @media screen and (max-width: 480px) {
   .contact__form {
     padding: var(--space-4);
@@ -255,6 +219,12 @@
   
   .contact__icon {
     align-self: center;
+  }
+  
+  /* 🔹 Ajuste padding inputs */
+  .form__input,
+  .form__textarea {
+    padding: var(--space-3);
   }
 }
 
