@@ -80,7 +80,27 @@
   
   .clients__grid {
     display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+    margin-top: var(--space-12);
   }
+  
+  .clients__grid .clients__logo {
+    height: 50px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+  }
+  
+  .clients__grid .clients__logo:nth-child(1) { animation-delay: 0.1s; }
+  .clients__grid .clients__logo:nth-child(2) { animation-delay: 0.2s; }
+  .clients__grid .clients__logo:nth-child(3) { animation-delay: 0.3s; }
+  .clients__grid .clients__logo:nth-child(4) { animation-delay: 0.4s; }
+  .clients__grid .clients__logo:nth-child(5) { animation-delay: 0.5s; }
+  .clients__grid .clients__logo:nth-child(6) { animation-delay: 0.6s; }
+  .clients__grid .clients__logo:nth-child(7) { animation-delay: 0.7s; }
+  .clients__grid .clients__logo:nth-child(8) { animation-delay: 0.8s; }
 }
 
 @media screen and (max-width: 480px) {
@@ -89,9 +109,8 @@
     gap: var(--space-4);
   }
   
-  /* 🔹 Ajuste altura logos */
   .clients__grid .clients__logo {
-    height: 50px;
+    height: 40px;
   }
 }
 
